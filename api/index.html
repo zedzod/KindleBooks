@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ex1</title>
+    <link href=assets/style.css rel=stylesheet>
+    <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+  </head>
+  <body background="assets/kindle.jpg">
+      
+    <header>
+      <h1>kindle-book-Ex1</h1>
+      <ul>
+        <a href="https://github.com/zedzod/KindleBooks"><li>Github.com</li></a>
+        <a href="https://github.com/zedzod/KindleBooks/archive/master.zip"><li>Download .zip</li></a>
+      </ul>
+    </header>
+    <div id="main-container">
+      <main>
+        <h1>kindle Book API</h1>
+       
+        <div class="request">
+          <h3>getAll:  [GET]</h3>
+          <a href="https://kindle-book.herokuapp.com/getAll">
+            https://kindle-book.herokuapp.com/getAll</a>
+          <h4>Headers:</h4>
+          <p>
+            <span class="indent"></span>Debug - getAll func was reached
+          </p>
+          <h4>JSON Response Example:</h4>
+          <div class="json">
+            [{
+                {
+                    "catagories":"kindleBooks",
+                    "kindleTybe":"amazonKindle",	
+                    "books": [{
+                            "id": "1",
+                            "title": "Action",
+                            "downloads":"200",
+                            "bookName":"superMan",
+                            "bages":"500"
+                        },
+                        {
+                            "id": "2",
+                            "title": "Drama",
+                            "downloads":"300",
+                            "bookName":"TheGoodWomen",
+                            "bages":"360"
+                        },
+                        {
+                            "id": "3",
+                            "title": "Horror",
+                            "downloads":"700",
+                            "bookName":"QuietPlace",
+                            "bages":"160"
+                        },
+                        {
+                            "id": "4",
+                            "title": "Comedy",
+                            "downloads":"900",
+                            "bookName":"GrimsbyBrothers",
+                            "bages":"230"
+                        }   
+                    ]
+            	}]
+            
+          </div>
+        </div>
+        <div class="request">
+          <h3>Get Book by ID: [GET | POST]</h3>
+          <a href="https://kindle-book.herokuapp.com/getBookByID/1">
+            https://kindle-book.herokuapp.com/getBookByID/1</a>
+          
+          <h4>Headers:</h4>
+          <p>
+            <span class="indent"></span>Debug - getBookBtID func was reached
+            <br><br>
+          </p>
+          <h4>JSON Response Example:</h4>
+          <div class="json">
+            [{
+                {
+
+                    "bookName": "superMan"
+                    
+            	}
+            ]
+          </div>
+        </div>
+        <div class="request">
+          <h3>search by id and title: [GET]</h3>
+          <a href="https://kindle-book.herokuapp.com/search/2/Drama">
+            https://kindle-book.herokuapp.com/search/2/Drama</a>
+        
+          <h4>Headers:</h4>
+          <p>
+            <span class="indent"></span>Debug - search with id and title param func was reached
+            <br><br>
+          </p>
+          <h4>JSON Response Example:</h4>
+          <div class="json">
+            [
+            {
+                Title: "Drama",
+                downloads: "300",
+                bookName: "TheGoodWomen",
+                bages: "360"
+            }
+            ]
+          </div>
+          <h4>error JSON Example:</h4>
+          <div class="json">
+            {
+            	"error": "Request route did not match any option!"
+            }
+          </div>
+        </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

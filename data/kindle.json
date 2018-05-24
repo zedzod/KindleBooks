@@ -1,0 +1,35 @@
+{
+    "catagories":"kindleBooks",
+    "kindleTybe":"amazonKindle",	
+	"books": [{
+			"id": "1",
+			"title": "Action",
+			"downloads":"200",
+			"bookName":"superMan",
+			"bages":"500"
+		},
+		{
+			"id": "2",
+			"title": "Drama",
+			"downloads":"300",
+			"bookName":"TheGoodWomen",
+			"bages":"360"
+        },
+        {
+			"id": "3",
+			"title": "Horror",
+			"downloads":"700",
+			"bookName":"QuietPlace",
+			"bages":"160"
+        },
+        {
+			"id": "4",
+			"title": "Comedy",
+			"downloads":"900",
+			"bookName":"GrimsbyBrothers",
+			"bages":"230"
+        }
+        
+	]
+	
+}
